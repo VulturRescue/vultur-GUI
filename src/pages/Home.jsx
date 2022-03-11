@@ -26,11 +26,11 @@ const StyledButton = styled(Button)(({ theme }) => ({
 
 
 
-const boxStyleCols = (height, width, inlineBlock=true) => {
-  return  {
+const boxStyleCols = (height, width, inlineBlock = true) => {
+  return {
     width: width,
     height: height,
-    display: inlineBlock?'inline-block': null,
+    display: inlineBlock ? 'inline-block' : null,
     p: 1,
     mx: 1,
     bgcolor: (theme) =>
@@ -68,21 +68,21 @@ const boxStyleRow = (height) => {
 
 const Home = () => {
   return (
-    <Box sx={{ height: '50rem', width: '100%' }}>
-      <Box sx={boxStyleCols("100%", "45%")}>
-        {/* <img src={Histograma}/> */}
+    <Box sx={{ height: '50rem', width: '100%', display: 'flex' }}>
+      <Box sx={boxStyleCols("100%", "50%")}>
+        <img src={Histograma} />
         Columna1
       </Box>
-      <Box sx={boxStyleCols("100%", "45%")}>
-        {/* <Box sx={boxStyleRow("40%")}>
+      <Box sx={boxStyleCols("100%", "50%")}>
+        <Box sx={boxStyleRow("40%")}>
           Row1
         </Box>
         <Box sx={boxStyleRow("20%")}>
-        Row2
+          Row2
         </Box>
         <Box sx={boxStyleRow("20%")}>
-        Row3
-        </Box> */}
+          Row3
+        </Box>
       </Box>
     </Box>
     // <div >
