@@ -10,19 +10,20 @@ const Values = () => {
 	}))
 
 	return (
-		<Grid container justifyContent="flexStart">
+		<Grid container justifyContent="flexStart" spacing={3}>
 			<Grid item xs={12}>
-				<Item elevation={8}>
+				<Item elevation={4}>
 					Valores
 				</Item>
 			</Grid>
-			<Grid container item xs={12}>
-				<Grid item xs={3}>c02</Grid>
-				<Grid item xs={3}>temp</Grid>
-				<Grid item xs={3}>siste</Grid>
-				<Grid item xs={3}>cpu</Grid>
+			<Grid item xs={12}>
+				<Grid container >
+					<Grid item xs={3}>c02</Grid>
+					<Grid item xs={3}>temp</Grid>
+					<Grid item xs={3}>siste</Grid>
+					<Grid item xs={3}>cpu</Grid>
+				</Grid>
 			</Grid>
-
 			<Grid item xs={12}>
 				<StyledButton variant='contained' color='success'>ON</StyledButton>
 				<StyledButton variant='contained' color='error'>OFF</StyledButton>

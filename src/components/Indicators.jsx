@@ -8,8 +8,12 @@ const Indicators = () => {
 
   return (
     <Box>
-      <h3>Indicators:</h3>
-      <Grid container spacing={2}>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Item elevation={4}>
+            Indicators:
+          </Item>
+        </Grid>
         <Grid item xs={6}>
           <Button variant="outlined">Report</Button>
         </Grid>
