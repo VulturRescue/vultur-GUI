@@ -1,9 +1,8 @@
 
 
 import Indicators from "../components/Indicators"
-import { styled } from '@mui/material/styles';
+import Values from "../components/Values"
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
@@ -21,22 +20,6 @@ import Histograma from "../img/histograma.jpg"
 //   color: theme.palette.text.secondary,
 
 // }));
-
-const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-  // height: 60,
-  lineHeight: '60px',
-  fontSize: '26px',
-}));
-
-
-const StyledButton = styled(Button)(({ theme }) => ({
-  margin: '3px',
-}))
-
-
 
 const boxStyleCols = (height, width, inlineBlock = true) => {
   return {
@@ -91,28 +74,14 @@ const Home = () => {
       </Box>
       <Box sx={boxStyleCols("100%", "50%")}>
         <Box sx={boxStyleRow("40%")}>
-          <Grid container justifyContent="flexStart">
-            <Grid item xs={12}>
-              <Item elevation={8}>
-                Valores
-              </Item>
-            </Grid>
-            <Grid item xs={12}>
-              <Chip> C02</Chip>
-            </Grid>
-            <Grid item xs={12}>
-              <StyledButton variant='contained' color='success'>ON</StyledButton>
-              <StyledButton variant='contained' color='error'>OFF</StyledButton>
-            </Grid>
-
-          </Grid>
+          <Values />
         </Box>
         <Box sx={boxStyleRow("20%")}>
           <img src={Spectogram} style={{ width: "100%", height: "100%" }} />
 
         </Box>
         <Box sx={boxStyleRow("20%")}>
-          <Indicators/>
+          <Indicators />
         </Box>
       </Box>
     </Box>
