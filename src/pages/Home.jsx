@@ -1,3 +1,6 @@
+
+
+import Indicators from "../components/Indicators"
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
@@ -109,7 +112,7 @@ const Home = () => {
 
         </Box>
         <Box sx={boxStyleRow("20%")}>
-          Row3
+          <Indicators/>
         </Box>
       </Box>
     </Box>
