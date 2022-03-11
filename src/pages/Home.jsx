@@ -68,79 +68,28 @@ const boxStyleRow = (height) => {
 
 const Home = () => {
   return (
-    <Box sx={{ height: '50rem', width: '100%', display: 'flex' }}>
+    <Box sx={{ height: '850px', width: '100%', display: 'flex' }}>
       <Box sx={boxStyleCols("100%", "50%")}>
         <img src={Histograma} />
         Columna1
       </Box>
       <Box sx={boxStyleCols("100%", "50%")}>
         <Box sx={boxStyleRow("40%")}>
-          Row1
+          <Grid container justifyContent="flexStart" xs={12}>
+            <StyledButton variant='contained' color='success'>ON</StyledButton>
+            <StyledButton variant='contained' color='error'>OFF</StyledButton>
+          </Grid>
         </Box>
         <Box sx={boxStyleRow("20%")}>
-          Row2
+          <img src={Spectogram} style={{ width: "100%", height: "100%" }} />
+
         </Box>
         <Box sx={boxStyleRow("20%")}>
           Row3
         </Box>
       </Box>
     </Box>
-    // <div >
-    //   <Grid container spacing={2} style={{maxHeight:"24rem"}}>
-    //     <Grid item style={{minHeight: "100%"}}  xs={6}>
-    //       <Item>
-    //       <img src={Histograma}/>
-    //       </Item>
-    //     </Grid>
-    //     <Grid item style={{ "height": "100%" }} xs={6}>
-    //       <Stack
-    //         direction="column"
-    //         spacing={2}>
-    //         <Item>
-    //           <Grid container spacing={2}>
-    //             <Grid item xs={6}>
-    //               <Item
-    //                 sx={{
-    //                   backgroundColor: '#b4e8fa',
-    //                 }}
-    //               >
-    //                 <h1>
-    //                   Holaa
-    //                 </h1>
-    //               </Item>
-    //             </Grid>
 
-    //             <Grid item xs={6}>
-    //               <Item>
-
-    //               </Item>
-    //             </Grid>
-    //           </Grid>
-    //           <Grid container justifyContent="flexStart" xs={12}>
-    //             <StyledButton variant='contained' color='success'>ON</StyledButton>
-    //             <StyledButton variant='contained' color='error'>OFF</StyledButton>
-    //           </Grid>
-    //         </Item>
-    //         <Item style={{ height: "25%"}}>
-    //           <img style={{ maxWidth: "100%"}} src={Spectogram}/>
-    //         </Item>
-    //         <Item>
-    //           <Grid container spacing={1}>
-    //             <Grid item xs={4}>
-    //                 Item1
-    //             </Grid>
-    //             <Grid item xs={4}>
-    //               Item2
-    //             </Grid>
-    //             <Grid item xs={4}>
-    //               Item3
-    //             </Grid>
-    //           </Grid>
-    //         </Item>
-    //       </Stack>
-    //     </Grid>
-    //   </Grid>
-    // </div >
   )
 }
 
