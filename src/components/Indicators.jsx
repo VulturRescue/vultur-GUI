@@ -11,7 +11,7 @@ const Indicators = () => {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Item elevation={4}>
-            Indicators:
+            Indicators
           </Item>
         </Grid>
         <Grid item xs={6}>

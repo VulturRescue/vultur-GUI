@@ -3,23 +3,11 @@
 import Indicators from "../components/Indicators"
 import Values from "../components/Values"
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-import Chip from '@mui/material/Chip';
+import Item from '../utils/styles/Item'
 
 import Spectogram from "../img/spectogram.png"
-import RVIZ from "../img/rviz.PNG"
 import Histograma from "../img/histograma.jpg"
 
-
-// const Item = styled(Paper)(({ theme }) => ({
-//   backgroundColor: 'white',
-//   ...theme.typography.body2,
-//   padding: theme.spacing(1),
-//   textAlign: 'center',
-//   color: theme.palette.text.secondary,
-
-// }));
 
 const boxStyleCols = (height, width, inlineBlock = true) => {
   return {
@@ -58,29 +46,32 @@ const boxStyleRow = (height) => {
     fontSize: '0.875rem',
     fontWeight: '700',
     textAlign: 'center',
+    marginBottom: '10px',
   })
-}
-
-const TitleStyle = {
-
 }
 
 const Home = () => {
   return (
     <Box sx={{ height: '850px', width: '100%', display: 'flex' }}>
       <Box sx={boxStyleCols("100%", "50%")}>
-        <img src={Histograma} />
-        Columna1
+        <Item elevation={4}>
+          Histograms
+        </Item>
+        <img src={Histograma} style={{ width: "100%", height: "65%", marginTop: "20px" }} />
       </Box>
+
       <Box sx={boxStyleCols("100%", "50%")}>
         <Box sx={boxStyleRow("40%")}>
           <Values />
         </Box>
-        <Box sx={boxStyleRow("20%")}>
-          <img src={Spectogram} style={{ width: "100%", height: "100%" }} />
 
+        <Box sx={boxStyleRow("35%")}>
+          <Item elevation={4}>
+            Spectogram
+          </Item>
+          <img src={Spectogram} style={{ width: "100%", height: "65%", marginTop: "20px" }} />
         </Box>
-        <Box sx={boxStyleRow("20%")}>
+        <Box sx={boxStyleRow("15%")}>
           <Indicators />
         </Box>
       </Box>
