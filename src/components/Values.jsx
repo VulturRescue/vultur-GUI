@@ -26,7 +26,7 @@ const Values = () => {
 		<Grid container justifyContent="flexStart" spacing={3}>
 			<Grid item xs={12}>
 				<Item elevation={4}>
-					Valores
+					Values
 				</Item>
 			</Grid>
 			<Grid item xs={12}>
