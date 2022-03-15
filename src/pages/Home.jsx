@@ -1,13 +1,8 @@
-
-
 import Indicators from "../components/Indicators"
 import Values from "../components/Values"
 import Spectogram from "../components/Spectogram"
 import Box from '@mui/material/Box';
-import Item from '../utils/styles/Item'
-
-import Histograma from "../img/histograma.jpg"
-
+import Histogram from "../components/Histogram"
 
 const boxStyleCols = (height, width, inlineBlock = true) => {
   return {
@@ -54,10 +49,7 @@ const Home = () => {
   return (
     <Box sx={{ height: '850px', width: '100%', display: 'flex' }}>
       <Box sx={boxStyleCols("100%", "50%")}>
-        <Item elevation={4}>
-          Histograms
-        </Item>
-        <img src={Histograma} style={{ width: "100%", height: "65%", marginTop: "20px" }} alt={"Histogram"} />
+        <Histogram />
       </Box>
 
       <Box sx={boxStyleCols("100%", "50%")}>
@@ -68,6 +60,7 @@ const Home = () => {
         <Box sx={boxStyleRow("35%")}>
           <Spectogram />
         </Box>
+
         <Box sx={boxStyleRow("15%")}>
           <Indicators />
         </Box>
