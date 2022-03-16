@@ -3,6 +3,7 @@ import Values from "../components/Values"
 import Spectogram from "../components/Spectogram"
 import Histogram from "../components/Histogram"
 import Title from "../components/Title"
+import Velocity from "../components/Velocity"
 import Box from '@mui/material/Box';
 
 
@@ -56,7 +57,15 @@ const Home = () => {
       <Box sx={{ height: '850px', width: '100%', display: 'flex' }}>
 
         <Box sx={boxStyleCols("100%", "50%")}>
-          <Histogram />
+
+          <Box sx={boxStyleRow("60%")}>
+            <Histogram />
+          </Box>
+
+          <Box sx={boxStyleRow("34%")}>
+            <Velocity />
+          </Box>
+
         </Box>
 
         <Box sx={boxStyleCols("100%", "50%")}>
