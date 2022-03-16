@@ -6,7 +6,11 @@ import Item from '../utils/styles/Item'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-
+import Switch from '@mui/material/Switch';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import MicIcon from '@mui/icons-material/Mic';
+import AirIcon from '@mui/icons-material/Air';
 
 const Values = () => {
 	const StyledButton = styled(Button)(({ theme }) => ({
@@ -36,7 +40,7 @@ const Values = () => {
 							<CardContent>
 
 								<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-									Word of the Day
+									Value of
 								</Typography>
 
 								<Typography variant="h5" component="div">
@@ -44,7 +48,7 @@ const Values = () => {
 								</Typography>
 
 								<Typography sx={{ mb: 1.5 }} color="text.secondary">
-									Nivel
+									Level
 								</Typography>
 
 								<Typography variant="body2">
@@ -59,7 +63,7 @@ const Values = () => {
 							<CardContent>
 
 								<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-									Word of the Day
+									Value of
 								</Typography>
 
 								<Typography variant="h5" component="div">
@@ -67,7 +71,7 @@ const Values = () => {
 								</Typography>
 
 								<Typography sx={{ mb: 1.5 }} color="text.secondary">
-									Nivel
+									Level
 								</Typography>
 
 								<Typography variant="body2">
@@ -82,7 +86,7 @@ const Values = () => {
 							<CardContent>
 
 								<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-									Word of the Day
+									Value of
 								</Typography>
 
 								<Typography variant="h5" component="div">
@@ -90,7 +94,7 @@ const Values = () => {
 								</Typography>
 
 								<Typography sx={{ mb: 1.5 }} color="text.secondary">
-									Nivel
+									Level
 								</Typography>
 
 								<Typography variant="body2">
@@ -105,7 +109,7 @@ const Values = () => {
 							<CardContent>
 
 								<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-									Word of the Day
+									Value of
 								</Typography>
 
 								<Typography variant="h5" component="div">
@@ -113,7 +117,7 @@ const Values = () => {
 								</Typography>
 
 								<Typography sx={{ mb: 1.5 }} color="text.secondary">
-									Nivel
+									Level
 								</Typography>
 
 								<Typography variant="body2">
@@ -125,9 +129,21 @@ const Values = () => {
 					</Grid>
 				</Grid>
 			</Grid>
-			<Grid item xs={12}>
+			<Grid item xs={3} sx={{ display: 'flex' }} justifyContent="Center">
+				<MicIcon sx={{ paddingTop: '7px', paddingRight: '11px' }}></MicIcon>
+				<FormGroup>
+					<FormControlLabel control={<Switch />} label="Mic"></FormControlLabel>
+				</FormGroup>
+			</Grid>
+			<Grid item xs={6}>
 				<StyledButton variant='contained' color='success'>ON</StyledButton>
 				<StyledButton variant='contained' color='error'>OFF</StyledButton>
+			</Grid>
+			<Grid item xs={3} sx={{ display: 'flex' }} justifyContent="Center">
+				<AirIcon sx={{ paddingTop: '7px', paddingRight: '11px' }}></AirIcon>
+				<FormGroup>
+					<FormControlLabel control={<Switch />} label="C02"></FormControlLabel>
+				</FormGroup>
 			</Grid>
 
 		</Grid>
